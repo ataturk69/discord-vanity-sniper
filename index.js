@@ -29,7 +29,7 @@ ws.onmessage = ({ data }) => {
         }
     } else if (t === "READY") guilds = d.guilds.reduce((a, { id, vanity_url_code }) => ({ ...a, [id]: vanity_url_code }), {});
     if (op === 10) {
-        ws.send(JSON.stringify({ op: 2, d: { token, intents: 1, properties: { os: "iOS", browser: "google", device: "" } } }));
+        ws.send(JSON.stringify({ op: 2, d: { token, intents: 1, properties: { os: "zantexq", browser: "zante46", device: "" } } }));
         setInterval(() => ws.send(JSON.stringify({ op: 1, d: {}, s: null, t: "heartbeat" })), d.heartbeat_interval);
     } else if (op === 7) process.exit();
 };
